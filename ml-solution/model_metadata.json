@@ -1,0 +1,51 @@
+{
+  "best_model_name": "RandomForest",
+  "test_mae": 65.77033054066071,
+  "test_r2": 0.9549810033462732,
+  "exact_matches": 0,
+  "close_matches": 2,
+  "total_test_cases": 200,
+  "feature_count": 39,
+  "top_features": [
+    {
+      "feature": "log_receipts",
+      "importance": 0.23049234338867047
+    },
+    {
+      "feature": "receipts_squared",
+      "importance": 0.21069083442115172
+    },
+    {
+      "feature": "receipts",
+      "importance": 0.1912225330368556
+    },
+    {
+      "feature": "days_squared",
+      "importance": 0.08449620813357578
+    },
+    {
+      "feature": "days",
+      "importance": 0.0794563793016914
+    },
+    {
+      "feature": "days_x_efficiency",
+      "importance": 0.03442785055048085
+    },
+    {
+      "feature": "miles",
+      "importance": 0.03191655011536573
+    },
+    {
+      "feature": "miles_squared",
+      "importance": 0.03133475674812921
+    },
+    {
+      "feature": "log_miles",
+      "importance": 0.030901516286121006
+    },
+    {
+      "feature": "has_rounding_bug",
+      "importance": 0.022966808462184393
+    }
+  ]
+}
