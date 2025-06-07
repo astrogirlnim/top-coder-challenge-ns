@@ -4,8 +4,8 @@
 This repository contains a black-box reverse engineering project for a receipt reimbursement algorithm. The files have been organized into logical groups for better maintainability.
 
 ## 🎯 **Main Solution**
-- **`run.sh`** - Main entry point (calls solution/calculate_reimbursement.py)
-- **`solution/calculate_reimbursement.py`** - **Current best implementation** (MAE: $125.04)
+- **`run.sh`** - Main entry point (calls solution/calculate_reimbursement_ml_pure.py)
+- **`solution/calculate_reimbursement_ml_pure.py`** - **Current best implementation** (MAE: $71.40, dependency-free ML solution)
 
 ## 📁 **Directory Structure**
 
@@ -37,10 +37,11 @@ This repository contains a black-box reverse engineering project for a receipt r
   - `FINAL_SOLUTION.md` - Final solution documentation
   - `README_ML_SOLUTION.md` - ML approach documentation
 
-### `ml-solution/` - Full ML Pipeline
-- Complete machine learning solution with dependencies
-- Training scripts, models, and optimization tools
-- **Note**: Not used in production due to dependency requirements
+### `ml-solution/` - ML Development Pipeline
+- Complete machine learning solution with dependencies (training/research only)
+- Training scripts, models, and extraction tools
+- `extract_pure_python.py` - Converts ML model to dependency-free version
+- **Note**: Original ML solution requires dependencies; pure Python version in solution/
 
 ### `archive/` - Historical Files
 - `backup-scripts/` - Backup versions of run scripts
@@ -66,10 +67,10 @@ This repository contains a black-box reverse engineering project for a receipt r
 
 | Approach | MAE | Dependencies | Status |
 |----------|-----|--------------|---------|
-| **Rule-Based (Current)** | **$125.04** | ✅ None | ✅ **Active** |
+| **Pure Python ML (Current)** | **$71.40** | ✅ None | ✅ **Active** |
+| Random Forest (Original) | $43.25 | ❌ scikit-learn | 🚫 Cannot deploy |
+| Rule-Based | $125.04 | ✅ None | 🧪 Archived |
 | Decision Tree | $136.63 | ✅ None | 🧪 Experimental |
-| ML Linear | $286.93 | ✅ None | 🧪 Experimental |
-| Random Forest | $43.00 | ❌ scikit-learn | 🚫 Cannot deploy |
 
 ## 🔧 **Development Guidelines**
 

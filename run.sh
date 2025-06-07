@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 solution/calculate_reimbursement.py "$1" "$2" "$3" 
+python3 solution/calculate_reimbursement_ml_pure.py "$1" "$2" "$3" 
