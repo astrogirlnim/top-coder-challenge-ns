@@ -191,6 +191,29 @@ The system proved more nuanced than any single theory. Success came from combini
 4. **Department-Specific Rules**: Investigate business unit variations
 5. **Advanced Error Analysis**: Focus on remaining high-error cases
 
+## June 2024 Update: High-Receipt Cap for 1-Day Super Productivity Trips
+
+### Rationale and Justification
+
+Analysis of high-error cases revealed that 1-day trips with very high receipts and high miles-per-day (600–900) were consistently overestimated by the previous algorithm. Interviews (see Kevin and Lisa) suggested that the legacy system is suspicious of extreme cases and likely applies a cap or strong diminishing return for very high receipts, especially on short trips. This is further supported by the error analysis, which showed that these cases produced the largest errors (over $1200 in some cases).
+
+### Algorithm Change
+
+A hard cap or steeply diminishing return is now applied to receipts above $1200 in the super productivity zone (600–900 miles/day) for 1-day trips. Receipts above this threshold are reimbursed at a sharply reduced rate (0.2x). This change is implemented as a named constant in the code for clarity and maintainability.
+
+### Performance Impact
+
+- **Average Error**: $252.51 (down from $257.44)
+- **Maximum Error**: $856.37 (down from $1203.90)
+- **Exact Matches**: 0
+- **Close Matches**: 3
+
+The change significantly reduced the maximum error and improved the handling of extreme high-receipt cases, while maintaining or slightly improving overall accuracy.
+
+### Next Steps
+
+Continue to analyze other high-error cases, especially for multi-day trips with high receipts, and investigate possible calendar or department effects as suggested by interviews and modular analysis.
+
 ## Conclusion
 
 We've successfully identified and implemented the core business logic of the legacy system, achieving significant accuracy improvements through systematic interview analysis and iterative development. The efficiency-based receipt processing represents a major breakthrough in understanding the system's complexity.

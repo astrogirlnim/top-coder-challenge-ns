@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900">
+  <!-- ... existing diagram ... -->
+  <!-- Add new logic for 1-day super productivity zone -->
+  <g id="super-productivity-1day-cap">
+    <rect x="700" y="200" width="320" height="120" fill="#f9f9f9" stroke="#333" stroke-width="2"/>
+    <text x="860" y="230" font-size="18" text-anchor="middle" fill="#222">1-Day Super Productivity</text>
+    <text x="860" y="255" font-size="15" text-anchor="middle" fill="#222">If Receipts &gt; $1200</text>
+    <text x="860" y="275" font-size="15" text-anchor="middle" fill="#222">Apply 0.2x to excess</text>
+    <text x="860" y="295" font-size="13" text-anchor="middle" fill="#666">(Cap for high receipts)</text>
+    <line x1="600" y1="250" x2="700" y2="250" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 L2,5 z" fill="#333" />
+    </marker>
+  </defs>
+  <!-- ... existing diagram ... -->
+</svg>
