@@ -1,6 +1,6 @@
 {
   "best_model_name": "RandomForest",
-  "test_mae": 65.77033054066071,
+  "test_mae": 65.77033054066072,
   "test_r2": 0.9549810033462732,
   "exact_matches": 0,
   "close_matches": 2,
