@@ -1,0 +1,31 @@
+{
+  "model_name": "RandomForest-Optimized",
+  "n_features": 15,
+  "top_features": [
+    "log_receipts",
+    "receipts_squared",
+    "receipts",
+    "days_squared",
+    "days",
+    "miles_squared",
+    "days_x_efficiency",
+    "log_miles",
+    "miles",
+    "has_rounding_bug",
+    "receipts_per_day",
+    "is_short_trip",
+    "is_long_trip",
+    "overspending_long",
+    "pseudo_submission_day"
+  ],
+  "test_mae": 66.38200576521372,
+  "test_r2": 0.9544164485836167,
+  "close_matches": 5,
+  "train_time": 0.04451131820678711,
+  "predict_time": 0.014481067657470703,
+  "improvements": {
+    "speed_improvement_pct": 22.42835714849609,
+    "feature_reduction_pct": 61.53846153846154,
+    "accuracy_loss_pct": 1.5199267996925963
+  }
+}
